@@ -28,9 +28,9 @@ latest_posts:
 
 Hi! I am **Xinyuan Zhou (周欣源)**, an undergraduate student in **Computer Science and Technology** at the School of Artificial Intelligence, Beijing Normal University.
 
-My research interests lie in **Human-AI Interaction**, **Usable Privacy and Security**, **Agentic Interaction**, and **Empirical HCI Research**. I am particularly interested in how users perceive, trust, and control AI agents in context-rich interaction scenarios, such as GUI agents, chatbots, AI glasses, and multi-agent decision-support systems.
+My research interests lie in **Human-AI Interaction**, **Usable Privacy and Security**, and **Agentic AI Systems**. I am especially interested in how users perceive, trust, and control AI agents in context-rich interaction scenarios, such as GUI agents, chatbots, AI glasses, and multi-agent decision-support systems.
 
-Before transferring to Computer Science, I studied **Information Management and Information Systems**, which shaped my interest in information behavior, user perception, and social-scientific research methods. My recent work explores AI-induced technology anxiety, information access, trust calibration, cognitive load, and privacy boundaries in agentic AI systems.
+Before transferring to Computer Science, I studied **Information Management and Information Systems**, where I developed an interest in information behavior, user perception, and social-scientific research methods. My current work explores AI-induced technology anxiety, information access, trust calibration, cognitive load, and privacy boundaries in agentic AI systems.
 
 ## Research Interests
 
