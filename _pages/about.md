@@ -2,33 +2,71 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Undergraduate Student, School of Artificial Intelligence, Beijing Normal University
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Beijing Normal University</p>
+    <p>School of Artificial Intelligence</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
+  scrollable: true
+  limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi! I am **Xinyuan Zhou (周欣源)**, an undergraduate student in **Computer Science and Technology** at the School of Artificial Intelligence, Beijing Normal University.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research interests lie in **Human-AI Interaction**, **Usable Privacy and Security**, **Agentic Interaction**, and **Empirical HCI Research**. I am particularly interested in how users perceive, trust, and control AI agents in context-rich interaction scenarios, such as GUI agents, chatbots, AI glasses, and multi-agent decision-support systems.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before transferring to Computer Science, I studied **Information Management and Information Systems**, which shaped my interest in information behavior, user perception, and social-scientific research methods. My recent work explores AI-induced technology anxiety, information access, trust calibration, cognitive load, and privacy boundaries in agentic AI systems.
+
+## Research Interests
+
+- **Usable Privacy for Agentic AI**: privacy boundaries, risk perception, trust calibration, and user control.
+- **Human-AI Interaction**: user perception, cognitive load, AI-assisted information seeking, and interaction experience.
+- **Empirical HCI Research**: user studies, experimental design, measurement modeling, and R/Python data analysis.
+- **Multi-Agent Systems**: decision support, transparency, autonomy, and explainability.
+
+## Selected Research Experience
+
+**AI-Induced Technology Anxiety and Information Gap**  
+National Undergraduate Innovation Training Program, Rated Outstanding  
+Studied how technology anxiety, avoidance, and distrust toward AI tools shape users’ information access, cognitive load, and learning outcomes.
+
+**AI-Assisted vs. Self-Directed Search**  
+First Prize & Best Research Argumentation, BNU Research Paper Competition  
+Led an empirical study comparing AI-assisted search with self-directed search in task performance and user experience.
+
+**Security Research Internship**  
+Distributed Systems and Network Security  
+Worked on literature review, threat modeling, risk boundary analysis, and manuscript development for a CCF-A-targeted submission.
+
+**FinPilot: Multi-Agent Decision-Support System**  
+National Undergraduate Entrepreneurship Training Program  
+Co-led a multi-agent system for young adults, focusing on user preference modeling, risk explanation, transparency, trust calibration, and privacy boundaries.
+
+## Selected Honors
+
+- National Scholarship
+- BYD Scholarship
+- Meritorious Winner, Mathematical Contest in Modeling
+- National First Prize, National College Students Mathematics Competition
+- First Prize, National English Competition for College Students
+- Three Grand Prizes, Beijing Challenge Cup
+
+## Contact
+
+Email: 202311260012@mail.bnu.edu.cn  
+GitHub: [zxy6688](https://github.com/zxy6688)
