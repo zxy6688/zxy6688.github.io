@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bodoni+Moda:opsz,wght@6..96,600&family=Newsreader:opsz,wght@6..72,500..650&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
@@ -49,7 +49,6 @@
           </p>
           <button type="button" class="welcome-enter" id="welcome-enter">Click to enter</button>
         </div>
-        <span class="welcome-corner" aria-hidden="true">BEIJING NORMAL UNIVERSITY</span>
       </div>
     {% endif %}
     <a class="skip-link" href="#main">Skip to content</a>
@@ -93,17 +92,24 @@
           background.forEach(function (element) {
             element.inert = true;
           });
+          var leaving = false;
           function dismiss() {
-            if (!document.documentElement.classList.contains('show-welcome')) return;
-            document.documentElement.classList.remove('show-welcome');
-            background.forEach(function (element) {
-              element.inert = false;
-            });
-            try {
-              sessionStorage.setItem('xinyuan-home-entered-v1', '1');
-            } catch (e) {}
-            main.focus({ preventScroll: true });
+            if (leaving) return;
+            leaving = true;
+            overlay.classList.add('is-leaving');
             document.removeEventListener('keydown', handleKey);
+            var duration = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450;
+            setTimeout(function () {
+              document.documentElement.classList.remove('show-welcome');
+              background.forEach(function (element) {
+                element.inert = false;
+              });
+              try {
+                sessionStorage.setItem('xinyuan-home-entered-v1', '1');
+              } catch (e) {}
+              main.focus({ preventScroll: true });
+              overlay.hidden = true;
+            }, duration);
           }
           function handleKey(e) {
             if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {

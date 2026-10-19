@@ -26,8 +26,7 @@ papers:
       - Yuting Yang
       - Yiwen Ren
       - Xin Yi
-    label: CHI 2027 · Submitted
-    status: CHI 2027 · Submitted
+    status: CHI 2027 — Submitted
     summary: Two phases of behavioral experiments with 640 participants investigating AI peers, social norms, and
       dishonest reporting.
     # Original paper figure: https://arxiv.org/html/2609.18060v1/Figure/findings.png
@@ -44,8 +43,7 @@ papers:
       - Yuting Yang
       - Shuai Ma
       - Xin Yi
-    label: CHI 2027 · Submitted
-    status: CHI 2027 · Submitted
+    status: CHI 2027 — Submitted
     summary: A dyadic human–AI study (N=76) of interpersonal privacy judgments and information-sharing boundaries.
     # Original paper figure: https://arxiv.org/html/2609.23403v1/Figure/teaser.png
     figure: /assets/img/research/privacy.png
@@ -62,7 +60,6 @@ papers:
       - Xinyuan Zhou
       # Author block verified at https://arxiv.org/html/2609.06212v1
       - Quan Yang
-    label: EMNLP / ARR
     status: EMNLP 2026 / ARR May — Reviewed & Rebutted
     history: ARR October 2026 — Revised, targeting COLING 2027.
     summary: An NLP and computational linguistics benchmark evaluating learning effectiveness of AI-generated slides
@@ -97,9 +94,9 @@ programs:
     description: Empirical research on how technology anxiety, avoidance, and distrust toward AI tools shape information
       access and learning experiences.
 special_prizes:
-  - Social Governance Track — Millimeter-Wave-Enabled Community Elderly-Care Services (SFIC-Based Study)
-  - AI Applications Track — AI-Powered Chinese Language Education for Thai K–12 Students
-  - AI Applications Track — Deep Learning and IoT-Based Sign Language Recognition
+  - "Special Prize — Social Governance: SFIC-Based Community Elderly-Care Services (Millimeter-Wave Technology)"
+  - "Special Prize — Artificial Intelligence: AI-Powered Chinese Language Education for Thai K–12 Students"
+  - "Special Prize — Artificial Intelligence: Deep Learning and IoT-Based Sign Language Recognition"
 honor_groups:
   - title: Scholarships & Academic Honors
     items:
