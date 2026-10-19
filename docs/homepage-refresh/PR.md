@@ -8,6 +8,7 @@ This refresh replaces the template-heavy landing page with a restrained English 
 - Three original arXiv figures are displayed at a consistent 8:5 ratio with `object-fit: contain`. Author lists are complete, with Xinyuan Zhou bolded in the second, third, and sixth positions.
 - Template pages/collections and remote demo posts are excluded from generated output; source history is retained. Actual output HTML routes are only Home, Honors, CV, and 404. Placeholder social accounts and example CV links are removed.
 - No dependency upgrade, framework migration, production branch update, deployment change, or fabricated Scholar URL. The existing example PDF is replaced in navigation by a real HTML CV generated from the verified content.
+- The formatter workflow now runs `npm ci` so it uses the existing lockfile. Previously it installed the latest formatter on each CI run, which produced a Linux CI-only style failure in the untouched legacy bibliography layout despite the locked local formatter passing. No package versions or deployment settings were changed.
 
 ## Repository audit
 
