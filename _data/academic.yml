@@ -7,15 +7,13 @@ photo: /assets/img/prof_pic.jpg
 interests: Human–Computer Interaction (HCI) · Natural Language Processing (NLP) · Large Language Models (LLMs) ·
   Multi-Agent Systems · AI for Education · Blockchain & Distributed Systems Security
 biography:
-  - I am an undergraduate student majoring in Computer Science and Technology at Beijing Normal University.
-  - Throughout my undergraduate studies, I have explored diverse areas of computer science and artificial intelligence,
-    including blockchain and distributed systems security, natural language processing, large language models, multi-agent
-    systems, and AI for education. These experiences have broadened my perspective and allowed me to engage with different
-    research methodologies, from mathematical modeling and system evaluation to empirical experimentation.
-  - Through these explorations, I have gradually developed a particular interest in <strong>Human–Computer Interaction
-    (HCI)</strong>. I am especially interested in understanding how emerging AI technologies shape human behavior
-    and social interactions. I am now pursuing HCI research more deeply, drawing on my interdisciplinary background
-    to investigate meaningful questions at the intersection of humans and AI.
+  - I am an undergraduate student in Computer Science and Technology at Beijing Normal University.
+    My research journey has taken me through blockchain and distributed systems security, natural language
+    processing, large language models, multi-agent systems, and AI for education.
+  - These experiences have gradually drawn me toward <strong>Human–Computer Interaction (HCI)</strong>.
+    I am particularly interested in how emerging AI technologies shape human behavior and social interactions.
+    Drawing on this interdisciplinary background, I am now pursuing HCI research more deeply, combining
+    experience in system evaluation and empirical experimentation to explore questions at the intersection of humans and AI.
 papers:
   - id: "2609.18060"
     alt: Original Figure 3 summarizing social norms, human and AI peers, and behavioral findings.
@@ -28,7 +26,8 @@ papers:
       - Yuting Yang
       - Yiwen Ren
       - Xin Yi
-    status: arXiv preprint (2026) · Submitted to CHI 2027
+    label: HCI
+    status: CHI 2027 · Submitted
     summary: Two phases of behavioral experiments with 640 participants investigating AI peers, social norms, and
       dishonest reporting.
     # Original paper figure: https://arxiv.org/html/2609.18060v1/Figure/findings.png
@@ -45,7 +44,8 @@ papers:
       - Yuting Yang
       - Shuai Ma
       - Xin Yi
-    status: arXiv preprint (2026) · Submitted to CHI 2027
+    label: HCI
+    status: CHI 2027 · Submitted
     summary: A dyadic human–AI study (N=76) of interpersonal privacy judgments and information-sharing boundaries.
     # Original paper figure: https://arxiv.org/html/2609.23403v1/Figure/teaser.png
     figure: /assets/img/research/privacy.png
@@ -60,21 +60,24 @@ papers:
       - Leqi Zheng
       - Yuheng Jing
       - Xinyuan Zhou
-      - Quan yang
-    status: arXiv preprint (2026)
-    history: ARR May 2026 (EMNLP 2026 review and rebuttal) → revised for ARR October 2026, targeting COLING 2027.
+      # Author block verified at https://arxiv.org/html/2609.06212v1
+      - Quan Yang
+    label: NLP / CL
+    status: EMNLP 2026 / ARR May — Reviewed & Rebutted
+    history: ARR October 2026 — Revised, targeting COLING 2027.
     summary: An NLP and computational linguistics benchmark evaluating learning effectiveness of AI-generated slides
       across 90 instructional units and 1,133 assessment items.
     # Original paper figure: https://arxiv.org/html/2609.06212v1/comic_intro.png
     figure: /assets/img/research/slate.png
 affiliations:
   - date: May 2026 – Present
-    title: Institute for Network Sciences and Cyberspace, Tsinghua University
+    title: Institute for Network Sciences and Cyberspace (INSC), Tsinghua University
     description: HCI / Human–AI Interaction Research Collaboration.
   - date: Mar 2026 – May 2026
     title: Beijing Normal University × University of Science and Technology of China
     description: NLP / AI for Education collaboration (SLATE).
   - date: Sep 2025 – Aug 2026
+    anchor: blockchain-security
     title: School of Artificial Intelligence, Beijing Normal University
     description: Research Internship in blockchain sharding, distributed systems, and information security.
     url: https://github.com/zxy6688/paper-reading-notes
@@ -90,13 +93,13 @@ programs:
       transparency, and trust calibration.
   - date: Mar 2024 – May 2025
     title: Technology Anxiety and Information Gaps in the Age of AI
-    detail: National Undergraduate Research Training Program · Completed; Outstanding Project Completion.
+    detail: National Undergraduate Research Training Program · Outstanding Completion.
     description: Empirical research on how technology anxiety, avoidance, and distrust toward AI tools shape information
       access and learning experiences.
 special_prizes:
-  - Social Governance — Millimeter-Wave-Enabled Community Elderly-Care Services (SFIC-Based Study)
-  - AI Applications — AI-Powered Chinese Language Education for Thai K–12 Students
-  - AI Applications — Deep Learning and IoT-Based Sign Language Recognition
+  - Social Governance Track — Millimeter-Wave-Enabled Community Elderly-Care Services (SFIC-Based Study)
+  - AI Applications Track — AI-Powered Chinese Language Education for Thai K–12 Students
+  - AI Applications Track — Deep Learning and IoT-Based Sign Language Recognition
 honor_groups:
   - title: Scholarships & Academic Honors
     items:
@@ -139,24 +142,23 @@ honor_groups:
 selected_honors:
   - - "2024"
     - National Scholarship, China
+  - - "2025"
+    - BYD Scholarship, Beijing Normal University
   - - "2024"
     - First Prize, National Undergraduate Mathematics Competition, Non-Mathematics Category A
   - - "2025"
     - First Prize, National English Competition for College Students, Category C
-  - - "2026"
-    - Meritorious Winner (M Award), Mathematical Contest in Modeling
   - - "2025"
     - First Prize, China International College Students’ Innovation Competition, Beijing Regional Competition
-  - - "2026"
-    - First Prize, Beijing College Students’ Innovation and Entrepreneurship Competition
-  - - "2026"
-    - Third Prize, Beijing Municipal Challenge Cup College Students’ Entrepreneurship Competition, Main Track
 service:
   - date: Sep 2025 – Oct 2026
+    short_title: Class President · BNU
     title: Class President, Computer Science and Technology Class of 2024, BNU
   - date: Oct 2026 – Present
+    short_title: Discipline Inspection Committee Member · Student Party Branch
     title: Discipline Inspection Committee Member, Undergraduate Student Party Branch, School of AI
   - date: Sep 2025 – Sep 2026
+    short_title: Student Union · Academic Competition Department
     title: Student Union Member, Academic Competition Department, School of AI
 volunteering: 324 hours of volunteer and community service, as reported in October 2026.
 news:
@@ -170,3 +172,4 @@ news:
     - Joined the Zeng Xianzi Outstanding Innovative Talents Development Program.
   - - Dec 2025
     - Received the BYD Scholarship and First-Class Jingshi Scholarship.
+ongoing_research: Ongoing HCI study; potential future submission to IJHCI.

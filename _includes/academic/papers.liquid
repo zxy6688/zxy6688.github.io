@@ -1,11 +1,14 @@
-<div class="papers">
+<div class="papers{% if include.compact %} papers-compact{% endif %}{% if include.text_only %} papers-text-only{% endif %}">
   {% for paper in site.data.academic.papers %}
     <article class="paper">
-      <div class="paper-visual">
-        <a href="https://arxiv.org/abs/{{ paper.id }}" aria-label="Read {{ paper.title | escape }}">
-          <img src="{{ paper.figure | relative_url }}" alt="{{ paper.alt | escape }}" loading="lazy" width="480" height="300">
-        </a>
-      </div>
+      {% unless include.text_only %}
+        <div class="paper-visual">
+          <span class="paper-kind">{{ paper.label }}</span>
+          <a href="https://arxiv.org/abs/{{ paper.id }}" aria-label="Read {{ paper.title | escape }}"
+            ><img src="{{ paper.figure | relative_url }}" alt="{{ paper.alt | escape }}" loading="lazy" width="480" height="300"
+          ></a>
+        </div>
+      {% endunless %}
       <div class="paper-copy">
         <h3>
           <a href="https://arxiv.org/abs/{{ paper.id }}">{{ paper.title | escape }}</a>
@@ -24,11 +27,16 @@
         {% if paper.history %}
           <p class="paper-history">{{ paper.history }}</p>
         {% endif %}
+        <p class="preprint">arXiv preprint · 2026</p>
         <div class="paper-links">
-          <a href="https://arxiv.org/abs/{{ paper.id }}" aria-label="arXiv: {{ paper.title | escape }}">arXiv ↗</a
-          ><a href="https://arxiv.org/pdf/{{ paper.id }}" aria-label="PDF: {{ paper.title | escape }}">PDF ↗</a>
+          <a href="https://arxiv.org/abs/{{ paper.id }}" aria-label="arXiv: {{ paper.title | escape }}">arXiv</a>
+          <a href="https://arxiv.org/pdf/{{ paper.id }}" aria-label="PDF: {{ paper.title | escape }}">PDF</a>
         </div>
-        <p class="paper-summary">{{ paper.summary }}</p>
+        {% unless include.text_only -%}
+          {%- unless include.compact %}
+            <p class="paper-summary">{{ paper.summary }}</p>
+          {% endunless -%}
+        {%- endunless %}
       </div>
     </article>
   {% endfor %}
