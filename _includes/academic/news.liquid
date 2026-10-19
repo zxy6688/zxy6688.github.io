@@ -1,0 +1,19 @@
+<ol class="news-list">
+  {% for item in site.data.academic.news %}
+    <li>
+      <span class="news-date">{{ item.date }}</span>
+      <span class="news-text">
+        {% if item.paper_id %}
+          {% for paper in site.data.academic.papers %}
+            {% if paper.id == item.paper_id %}
+              <a href="https://arxiv.org/abs/{{ paper.id }}">{{ paper.title | escape }}</a>
+            {% endif %}
+          {% endfor %}
+          <span class="news-context">{{ item.text }}</span>
+        {% else %}
+          {{ item.text }}
+        {% endif %}
+      </span>
+    </li>
+  {% endfor %}
+</ol>
