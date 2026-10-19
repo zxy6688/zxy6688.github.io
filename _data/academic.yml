@@ -26,7 +26,7 @@ papers:
       - Yuting Yang
       - Yiwen Ren
       - Xin Yi
-    label: HCI
+    label: CHI 2027 · Submitted
     status: CHI 2027 · Submitted
     summary: Two phases of behavioral experiments with 640 participants investigating AI peers, social norms, and
       dishonest reporting.
@@ -44,7 +44,7 @@ papers:
       - Yuting Yang
       - Shuai Ma
       - Xin Yi
-    label: HCI
+    label: CHI 2027 · Submitted
     status: CHI 2027 · Submitted
     summary: A dyadic human–AI study (N=76) of interpersonal privacy judgments and information-sharing boundaries.
     # Original paper figure: https://arxiv.org/html/2609.23403v1/Figure/teaser.png
@@ -62,7 +62,7 @@ papers:
       - Xinyuan Zhou
       # Author block verified at https://arxiv.org/html/2609.06212v1
       - Quan Yang
-    label: NLP / CL
+    label: EMNLP / ARR
     status: EMNLP 2026 / ARR May — Reviewed & Rebutted
     history: ARR October 2026 — Revised, targeting COLING 2027.
     summary: An NLP and computational linguistics benchmark evaluating learning effectiveness of AI-generated slides
@@ -162,14 +162,17 @@ service:
     title: Student Union Member, Academic Competition Department, School of AI
 volunteering: 324 hours of volunteer and community service, as reported in October 2026.
 news:
-  - - Oct 2026
-    - SLATE revised through ARR, targeting COLING 2027, after EMNLP review and rebuttal.
-  - - Sep 2026
-    - Two HCI research preprints released on arXiv.
-  - - Sep 2026
-    - SLATE released on arXiv.
-  - - Apr 2026
-    - Joined the Zeng Xianzi Outstanding Innovative Talents Development Program.
-  - - Dec 2025
-    - Received the BYD Scholarship and First-Class Jingshi Scholarship.
+  - date: Oct 2026
+    paper_id: "2609.06212"
+    text: "Revised following EMNLP 2026 / ARR review and rebuttal; targeting COLING 2027."
+  - date: Sep 2026
+    paper_id: "2609.18060"
+    text: "Preprint released on arXiv."
+  - date: Sep 2026
+    paper_id: "2609.23403"
+    text: "Preprint released on arXiv."
+  - date: Apr 2026
+    text: "Joined the Zeng Xianzi Outstanding Innovative Talents Development Program."
+  - date: Dec 2025
+    text: "Received the BYD Scholarship and First-Class Jingshi Scholarship."
 ongoing_research: Ongoing HCI study; potential future submission to IJHCI.

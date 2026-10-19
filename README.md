@@ -2,12 +2,13 @@
 
 Personal academic website: https://zxy6688.github.io/
 
-Built with the existing Jekyll / al-folio setup. About, Research, Projects, Honors, and CV share one content source; no frontend framework or JavaScript is needed for these pages.
+Built with the existing Jekyll / al-folio setup. About, Research, Projects, Honors, and CV share one content source. A small inline script shows the homepage entrance once per tab; the website remains accessible without JavaScript. No frontend framework is used.
 
 ## Maintaining the website
 
 - Edit `_data/academic.yml` for the biography, research interests, three preprints, affiliations, projects, awards, service, and news. All five pages update together.
 - Edit `_data/socials.yml` for the public email address and GitHub username.
+- News entries can reference a paper's arXiv ID through `paper_id`; the title and link are rendered from the shared paper data.
 - Keep the original portrait at `assets/img/prof_pic.jpg` unchanged. The three original paper figures are in `assets/img/research/`; source URLs are recorded next to their entries in the content data.
 - Page entries live in `_pages/`; `academic*.liquid` layouts and `_includes/academic/` provide the shared presentation. Styles are in `assets/css/academic.css`.
 - `/cv/` is an English HTML CV with print styles. Use the browser's Print command to save it as a PDF. No placeholder CV or Scholar profile is linked.

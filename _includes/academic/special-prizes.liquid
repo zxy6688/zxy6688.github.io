@@ -1,10 +1,14 @@
-<div class="special-prizes">
-  <h3 class="prize-heading">2025 · Three Special Prizes · Beijing Municipal Challenge Cup</h3>
-  <p class="competition-name">Extracurricular Academic and Technological Works Competition</p>
-  {% for prize in site.data.academic.special_prizes %}
-    <div class="prize-row">
-      <div class="prize-level"><strong>Special Prize</strong><span>Beijing Municipal Level</span></div>
-      <p>{{ prize }}</p>
+<div class="special-prizes" aria-label="Three Special Prizes at Beijing Challenge Cup">
+  <div class="special-prizes-header">
+    <span class="special-prizes-number" aria-label="Three awards">03</span>
+    <div>
+      <h3>Special Prizes · Beijing Challenge Cup</h3>
+      <p>2025 · Municipal-level academic and technological works competition</p>
     </div>
-  {% endfor %}
+  </div>
+  <ol class="special-prizes-list">
+    {% for prize in site.data.academic.special_prizes %}
+      <li>{{ prize }}</li>
+    {% endfor %}
+  </ol>
 </div>

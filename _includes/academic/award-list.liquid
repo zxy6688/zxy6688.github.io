@@ -2,7 +2,13 @@
   {% for item in include.items %}
     <div>
       <dt>{{ item[0] }}</dt>
-      <dd>{{ item[1] }}</dd>
+      <dd>
+        {{
+          item[1]
+          | replace: 'National Scholarship', '<strong>National Scholarship</strong>'
+          | replace: 'BYD Scholarship', '<strong>BYD Scholarship</strong>'
+        }}
+      </dd>
     </div>
   {% endfor %}
 </dl>

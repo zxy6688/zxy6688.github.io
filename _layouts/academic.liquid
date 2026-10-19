@@ -13,19 +13,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+    {% if page.url == '/' %}
+      <script>
+        // The introduction is opt-in for JavaScript visitors, shown once per tab.
+        try {
+          if (!sessionStorage.getItem('xinyuan-home-entered-v1')) {
+            document.documentElement.classList.add('show-welcome');
+          }
+        } catch (e) {
+          /* Homepage remains usable when storage is unavailable. */
+        }
+      </script>
+    {% endif %}
   </head>
   <body>
+    {% if page.url == '/' %}
+      <div
+        class="welcome-screen"
+        id="welcome-screen"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="welcome-name"
+        aria-describedby="welcome-caption"
+        tabindex="-1"
+      >
+        <div class="welcome-content">
+          <h1 id="welcome-name">{{ site.data.academic.name }}</h1>
+          <p class="welcome-caption" id="welcome-caption">
+            Exploring intelligent systems.<br>
+            Understanding human experience.
+          </p>
+          <button type="button" class="welcome-enter" id="welcome-enter">Click to enter</button>
+        </div>
+        <span class="welcome-corner" aria-hidden="true">BEIJING NORMAL UNIVERSITY</span>
+      </div>
+    {% endif %}
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="header-inner" aria-label="Main navigation">
         {% assign titles = 'About,Research,Projects,Honors,CV' | split: ',' %}
         {% assign urls = '/,/research/,/projects/,/honors/,/cv/' | split: ',' %}
-        {% for title in titles -%}
-          {%- assign url = urls[forloop.index0] %}
+        {% for title in titles %}
+          {% assign url = urls[forloop.index0] %}
           <a
             href="{{ url | relative_url }}"
             {% if page.url == url %}
@@ -39,13 +72,53 @@
     </header>
     <div class="page-shell">
       {% include academic/sidebar.liquid %}
-      <main id="main" class="main-content{% if page.url == '/cv/' %} cv-content{% endif %}">{{ content }}</main>
+      <main id="main" tabindex="-1" class="main-content{% if page.url == '/cv/' %} cv-content{% endif %}">{{ content }}</main>
     </div>
     <footer class="site-footer">
       <span
         >© {{ 'now' | date: '%Y' }}
         {{ site.data.academic.name -}}</span
-      ><span>Beijing Normal University</span>
+      ><span>Built with Jekyll · Hosted on GitHub Pages</span>
     </footer>
+
+    {% if page.url == '/' %}
+      <script>
+        (function () {
+          var overlay = document.getElementById('welcome-screen');
+          var enter = document.getElementById('welcome-enter');
+          var main = document.getElementById('main');
+          var active = document.documentElement.classList.contains('show-welcome');
+          if (!overlay || !enter || !active) return;
+          var background = document.querySelectorAll('.site-header, .page-shell, .site-footer, .skip-link');
+          background.forEach(function (element) {
+            element.inert = true;
+          });
+          function dismiss() {
+            if (!document.documentElement.classList.contains('show-welcome')) return;
+            document.documentElement.classList.remove('show-welcome');
+            background.forEach(function (element) {
+              element.inert = false;
+            });
+            try {
+              sessionStorage.setItem('xinyuan-home-entered-v1', '1');
+            } catch (e) {}
+            main.focus({ preventScroll: true });
+            document.removeEventListener('keydown', handleKey);
+          }
+          function handleKey(e) {
+            if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              dismiss();
+            } else if (e.key === 'Tab') {
+              e.preventDefault();
+              enter.focus({ preventScroll: true });
+            }
+          }
+          overlay.addEventListener('click', dismiss);
+          document.addEventListener('keydown', handleKey);
+          overlay.focus({ preventScroll: true });
+        })();
+      </script>
+    {% endif %}
   </body>
 </html>

@@ -14,7 +14,7 @@ layout: academic
 </section>
 <section id="research" class="section">
   <div class="section-heading">
-    <h2>Selected Research</h2>
+    <h2>Selected Publications</h2>
     <a href="{{ '/research/' | relative_url }}">All Research →</a>
   </div>
   {% include academic/papers.liquid compact=true %}
@@ -35,12 +35,12 @@ layout: academic
     <h2>Selected Honors</h2>
     <a href="{{ '/honors/' | relative_url }}">All Honors →</a>
   </div>
-  {% include academic/special-prizes.liquid %}
   {% include academic/award-list.liquid items=a.selected_honors %}
+  {% include academic/special-prizes.liquid %}
 </section>
 <section class="section" id="news">
   <h2>News</h2>
-  {% include academic/award-list.liquid items=a.news %}
+  {% include academic/news.liquid %}
 </section>
 <section class="section">
   <div class="section-heading">

@@ -34,9 +34,9 @@ layout: academic
 </section>
 <section class="section">
   <h2>Honors &amp; Awards</h2>
-  {% include academic/special-prizes.liquid -%}
-  {%- for group in a.honor_groups %}
+  {% for group in a.honor_groups %}
     <h3 class="cv-subheading">{{ group.title }}</h3>
+    {% if group.title == 'Innovation & Entrepreneurship' %}{% include academic/special-prizes.liquid %}{% endif %}
     {% include academic/award-list.liquid items=group.items -%}
   {%- endfor %}
 </section>
