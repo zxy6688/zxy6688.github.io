@@ -1,0 +1,57 @@
+---
+layout: academic
+---
+{% assign a = site.data.academic %}
+<section class="hero" aria-labelledby="name">
+  <div class="hero-intro">
+    <p class="eyebrow">{{ a.role }}</p>
+    <h1 id="name">
+      {{ a.name }}
+      <span lang="zh">{{ a.chinese_name }}</span>
+    </h1>
+    <p class="identity">
+      Computer Science and Technology<br>
+      {{ a.school }}
+    </p>
+    {% include academic/contact.liquid %}
+  </div>
+  <img class="portrait" src="{{ a.photo | relative_url }}" alt="Portrait of Xinyuan Zhou" width="1447" height="1312" fetchpriority="high">
+  <div class="biography">
+    {% for paragraph in a.biography %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
+</section>
+<section class="interests" aria-labelledby="interests-heading">
+  <h2 id="interests-heading">Research Interests</h2>
+  <p>{{ a.interests }}</p>
+</section>
+<section id="research" class="section">
+  <h2>Selected Research &amp; Preprints</h2>
+  {% include academic/papers.liquid %}
+</section>
+<section class="section">
+  <h2>Research Affiliations</h2>
+  {% include academic/timeline.liquid items=a.affiliations %}
+</section>
+<section class="section">
+  <h2>Research Programs &amp; Projects</h2>
+  {% include academic/programs.liquid %}
+</section>
+<section class="section" id="honors">
+  <div class="section-heading">
+    <h2>Selected Honors &amp; Awards</h2>
+    <a href="{{ '/honors/' | relative_url }}">View all honors ↗</a>
+  </div>
+  {% include academic/special-prizes.liquid %}
+  {% include academic/award-list.liquid items=a.selected_honors %}
+</section>
+<section class="section">
+  <h2>Leadership &amp; Service</h2>
+  {% include academic/timeline.liquid items=a.service %}
+  <p class="service-note">{{ a.volunteering }}</p>
+</section>
+<section class="section" id="news">
+  <h2>News</h2>
+  {% include academic/award-list.liquid items=a.news %}
+</section>

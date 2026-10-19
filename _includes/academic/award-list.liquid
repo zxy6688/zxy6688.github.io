@@ -1,0 +1,8 @@
+<dl class="award-list">
+  {% for item in include.items %}
+    <div>
+      <dt>{{ item[0] }}</dt>
+      <dd>{{ item[1] }}</dd>
+    </div>
+  {% endfor %}
+</dl>

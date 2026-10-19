@@ -1,0 +1,12 @@
+{% for program in site.data.academic.programs %}
+  <article class="program">
+    <div class="program-heading">
+      <h3>{{ program.title }}</h3>
+      <span class="date">{{ program.date }}</span>
+    </div>
+    <p class="program-detail">{{ program.detail }}</p>
+    {% if program.description %}
+      <p>{{ program.description }}</p>
+    {% endif %}
+  </article>
+{% endfor %}
