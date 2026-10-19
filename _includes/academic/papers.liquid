@@ -2,16 +2,9 @@
   {% for paper in site.data.academic.papers %}
     <article class="paper">
       <div class="paper-visual">
-        {% if paper.figure %}
-          <a href="https://arxiv.org/abs/{{ paper.id }}" aria-label="Read {{ paper.title | escape }}">
-            <img src="{{ paper.figure | relative_url }}" alt="{{ paper.alt | escape }}" loading="lazy" width="480" height="300">
-          </a>
-        {% else %}
-          <!-- TODO-paper-figure: replace neutral label only with a verified original figure. -->
-          <div class="figure-placeholder">
-            <span>{{ paper.label }}</span><small>Research preprint · 2026</small>
-          </div>
-        {% endif %}
+        <a href="https://arxiv.org/abs/{{ paper.id }}" aria-label="Read {{ paper.title | escape }}">
+          <img src="{{ paper.figure | relative_url }}" alt="{{ paper.alt | escape }}" loading="lazy" width="480" height="300">
+        </a>
       </div>
       <div class="paper-copy">
         <h3>

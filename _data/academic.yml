@@ -18,8 +18,6 @@ biography:
     to investigate meaningful questions at the intersection of humans and AI.
 papers:
   - id: "2609.18060"
-    image: ai-peers
-    label: AI peers & social influence
     alt: Original Figure 3 summarizing social norms, human and AI peers, and behavioral findings.
     title: AI Peers Exert Social Influence on Human Dishonesty in Groups
     authors:
@@ -33,10 +31,9 @@ papers:
     status: arXiv preprint (2026) · Submitted to CHI 2027
     summary: Two phases of behavioral experiments with 640 participants investigating AI peers, social norms, and
       dishonest reporting.
+    # Original paper figure: https://arxiv.org/html/2609.18060v1/Figure/findings.png
     figure: /assets/img/research/ai-peers.png
   - id: "2609.23403"
-    image: privacy
-    label: Interpersonal privacy
     alt: Overview of the interpersonal privacy study from the original preprint.
     title: Alignment and Divergence between Humans and AI in Interpersonal Privacy Decisions
     authors:
@@ -50,10 +47,9 @@ papers:
       - Xin Yi
     status: arXiv preprint (2026) · Submitted to CHI 2027
     summary: A dyadic human–AI study (N=76) of interpersonal privacy judgments and information-sharing boundaries.
+    # Original paper figure: https://arxiv.org/html/2609.23403v1/Figure/teaser.png
     figure: /assets/img/research/privacy.png
   - id: "2609.06212"
-    image: slate
-    label: SLATE · Language teaching
     alt: Original SLATE Figure 1 illustrating the gap between visually polished slides and learner knowledge acquisition.
     title: "SLATE: Are AI-Generated Slides Educationally Effective? A Benchmark for Language Teaching Quality and
       Learner Knowledge Acquisition"
@@ -69,6 +65,7 @@ papers:
     history: ARR May 2026 (EMNLP 2026 review and rebuttal) → revised for ARR October 2026, targeting COLING 2027.
     summary: An NLP and computational linguistics benchmark evaluating learning effectiveness of AI-generated slides
       across 90 instructional units and 1,133 assessment items.
+    # Original paper figure: https://arxiv.org/html/2609.06212v1/comic_intro.png
     figure: /assets/img/research/slate.png
 affiliations:
   - date: May 2026 – Present
