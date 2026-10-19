@@ -1,16 +1,21 @@
 <div class="timeline">
   {% for item in include.items %}
-    <div class="timeline-row">
-      <div class="date">{{ item.date }}</div>
-      <div>
+    <div
+      class="timeline-row"
+      {% if item.anchor %}
+        id="{{ item.anchor }}"
+      {% endif %}
+    >
+      <div class="timeline-heading">
         <h3>{{ item.title }}</h3>
-        {% if item.description %}
-          <p>{{ item.description }}</p>
-        {% endif -%}
-        {%- if item.url -%}
-          <a class="inline-link" href="{{ item.url }}">{{ item.link_label }} ↗</a>
-        {%- endif %}
+        <span class="date">{{ item.date }}</span>
       </div>
+      {% if item.description %}
+        <p>{{ item.description }}</p>
+      {% endif %}
+      {% if item.url -%}
+        <a class="inline-link" href="{{ item.url }}">{{ item.link_label }} ↗</a>
+      {%- endif %}
     </div>
   {% endfor %}
 </div>

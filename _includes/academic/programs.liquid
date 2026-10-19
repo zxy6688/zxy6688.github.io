@@ -1,12 +1,16 @@
-{% for program in site.data.academic.programs %}
+{% assign program_limit = site.data.academic.programs.size %}
+{% if include.compact %}{% assign program_limit = 2 %}{% endif %}
+{% for program in site.data.academic.programs limit: program_limit %}
   <article class="program">
     <div class="program-heading">
       <h3>{{ program.title }}</h3>
       <span class="date">{{ program.date }}</span>
     </div>
     <p class="program-detail">{{ program.detail }}</p>
-    {% if program.description %}
-      <p>{{ program.description }}</p>
-    {% endif %}
+    {% unless include.compact -%}
+      {%- if program.description %}
+        <p>{{ program.description }}</p>
+      {% endif -%}
+    {%- endunless %}
   </article>
 {% endfor %}

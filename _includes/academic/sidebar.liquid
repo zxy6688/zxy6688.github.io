@@ -1,0 +1,15 @@
+{% assign a = site.data.academic %}
+<aside class="sidebar" aria-label="Personal information">
+  <div class="sidebar-identity">
+    <a class="profile-name" href="{{ '/' | relative_url }}">{{ a.name | replace: ' ', '<br>' }}</a>
+    <p class="chinese-name" lang="zh">{{ a.chinese_name }}</p>
+    <p class="identity">
+      {{ a.role -}}
+      <br>
+      Computer Science and Technology
+    </p>
+    <p class="school">{{ a.school }}</p>
+  </div>
+  <img class="portrait" src="{{ a.photo | relative_url }}" alt="Portrait of Xinyuan Zhou" width="1447" height="1312" fetchpriority="high">
+  {% include academic/contact.liquid %}
+</aside>

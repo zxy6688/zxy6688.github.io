@@ -4,48 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      {% unless page.url == '/' %}{{ page.title | escape }} · {% endunless %}
+      {{ page.title | escape }}
+      ·
       {{ site.data.academic.name }}
     </title>
     <meta name="description" content="{{ site.description | strip | escape }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="header-inner">
-        <a class="wordmark" href="{{ '/' | relative_url }}">Xinyuan Zhou<span lang="zh">周欣源</span></a>
-        <nav aria-label="Main navigation">
+      <nav class="header-inner" aria-label="Main navigation">
+        {% assign titles = 'About,Research,Projects,Honors,CV' | split: ',' %}
+        {% assign urls = '/,/research/,/projects/,/honors/,/cv/' | split: ',' %}
+        {% for title in titles -%}
+          {%- assign url = urls[forloop.index0] %}
           <a
-            href="{{ '/' | relative_url }}"
-            {% if page.url == '/' %}
+            href="{{ url | relative_url }}"
+            {% if page.url == url %}
               aria-current="page"
             {% endif %}
-            >Home</a
           >
-          <a href="{{ '/#research' | relative_url }}">Research</a>
-          <a
-            href="{{ '/honors/' | relative_url }}"
-            {% if page.url == '/honors/' %}
-              aria-current="page"
-            {% endif %}
-            >Honors</a
-          >
-          <a
-            href="{{ '/cv/' | relative_url }}"
-            {% if page.url == '/cv/' %}
-              aria-current="page"
-            {% endif %}
-            >CV</a
-          >
-        </nav>
-      </div>
+            {{- title -}}
+          </a>
+        {% endfor %}
+      </nav>
     </header>
-    <main id="main" class="page-shell">{{ content }}</main>
-    <footer class="site-footer page-shell">
-      <span>© {{ 'now' | date: '%Y' }} Xinyuan Zhou</span>
-      {% include academic/contact.liquid %}
+    <div class="page-shell">
+      {% include academic/sidebar.liquid %}
+      <main id="main" class="main-content{% if page.url == '/cv/' %} cv-content{% endif %}">{{ content }}</main>
+    </div>
+    <footer class="site-footer">
+      <span
+        >© {{ 'now' | date: '%Y' }}
+        {{ site.data.academic.name -}}</span
+      ><span>Beijing Normal University</span>
     </footer>
   </body>
 </html>
