@@ -1,14 +1,9 @@
 <div class="special-prizes" aria-label="Three Special Prizes at Beijing Challenge Cup">
-  <div class="special-prizes-header">
-    <span class="special-prizes-number" aria-label="Three awards">03</span>
-    <div>
-      <h3>Special Prizes · Beijing Challenge Cup</h3>
-      <p>2025 · Municipal-level academic and technological works competition</p>
-    </div>
-  </div>
-  <ol class="special-prizes-list">
+  <h3>2025 Beijing Challenge Cup — Three Special Prizes</h3>
+  <p class="prize-scope">Beijing municipal-level academic and technological works competition</p>
+  <ul class="special-prizes-list">
     {% for prize in site.data.academic.special_prizes %}
       <li>{{ prize }}</li>
     {% endfor %}
-  </ol>
+  </ul>
 </div>
