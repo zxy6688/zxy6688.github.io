@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% unless page.url == '/' %}{{ page.title | escape }} · {% endunless %}
+      {{ site.data.academic.name }}
+    </title>
+    <meta name="description" content="{{ site.description | strip | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="{{ '/' | relative_url }}">Xinyuan Zhou<span lang="zh">周欣源</span></a>
+        <nav aria-label="Main navigation">
+          <a
+            href="{{ '/' | relative_url }}"
+            {% if page.url == '/' %}
+              aria-current="page"
+            {% endif %}
+            >Home</a
+          >
+          <a href="{{ '/#research' | relative_url }}">Research</a>
+          <a
+            href="{{ '/honors/' | relative_url }}"
+            {% if page.url == '/honors/' %}
+              aria-current="page"
+            {% endif %}
+            >Honors</a
+          >
+          <a
+            href="{{ '/cv/' | relative_url }}"
+            {% if page.url == '/cv/' %}
+              aria-current="page"
+            {% endif %}
+            >CV</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="page-shell">{{ content }}</main>
+    <footer class="site-footer page-shell">
+      <span>© {{ 'now' | date: '%Y' }} Xinyuan Zhou</span>
+      {% include academic/contact.liquid %}
+    </footer>
+  </body>
+</html>
