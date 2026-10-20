@@ -27,7 +27,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2.0.2
         with:
           fail: true
-          args: --offline --root-dir "${{ github.workspace }}/_site" --no-progress '_site/**/*.html'
+          args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --no-progress '_site/**/*.html'
       - name: Publish generated site
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
