@@ -1,29 +1,44 @@
 # Xinyuan Zhou — Academic Homepage
 
-Personal academic website: https://zxy6688.github.io/
+Website: https://zxy6688.github.io/
 
-Built with the existing Jekyll / al-folio setup. About, Research, Projects, Honors, and CV share one content source. A small inline script shows the homepage entrance once per tab; the website remains accessible without JavaScript. No frontend framework is used.
+A small Jekyll academic website derived from al-folio. About, Research, Projects, Honors and CV share the same layouts and content. No frontend framework is required.
 
-## Maintaining the website
+## Update content
 
-- Edit `_data/academic.yml` for the biography, research interests, three preprints, affiliations, projects, awards, service, and news. All five pages update together.
-- Edit `_data/socials.yml` for the public email address and GitHub username.
-- News entries can reference a paper's arXiv ID through `paper_id`; the title and link are rendered from the shared paper data.
-- Keep the original portrait at `assets/img/prof_pic.jpg` unchanged. The three original paper figures are in `assets/img/research/`; source URLs are recorded next to their entries in the content data.
-- Page entries live in `_pages/`; `academic*.liquid` layouts and `_includes/academic/` provide the shared presentation. Styles are in `assets/css/academic.css`.
-- `/cv/` is an English HTML CV with print styles. Use the browser's Print command to save it as a PDF. No placeholder CV or Scholar profile is linked.
+- `_data/academic.yml`: biography, papers, projects, affiliations, honors, service and news. News uses `paper_id` to reuse the real paper title and link.
+- `_data/socials.yml`: email and GitHub username.
+- `_pages/`: five pages and the 404 page.
+- `_layouts/academic*.liquid` and `_includes/academic/`: shared presentation.
+- `assets/css/academic.css`: all website styles.
+- `assets/img/prof_pic.jpg`: original portrait; do not replace or alter it. The three original figures are in `assets/img/research/`.
+- `/cv/`: complete HTML CV with print styles; use Print to save a PDF.
 
-## Build and deploy
+Keep submission statuses and confirmed dates accurate. The entrance appears once per tab, with keyboard, touch and reduced-motion support.
 
-Use the repository's existing Ruby dependencies and lockfile:
+## Build and check
+
+Use Ruby 3.3 and the committed dependency lockfile:
 
 ```sh
 bundle install
 JEKYLL_ENV=production bundle exec jekyll build
 npm ci
 npx prettier . --check
+bundle exec jekyll serve
 ```
 
-The existing Docker Compose setup is also available. GitHub Actions runs the production build and CSS cleanup. Pull requests are checked without deployment; merging into `main` publishes the generated site through `gh-pages` and GitHub Pages.
+Check the five pages, images, links, entrance and mobile layout before publishing. Screenshots, logs and reference material belong outside this repository.
 
-Keep development screenshots, logs, reference websites, and temporary reports outside this repository. Preserve accurate preprint/submission labels and confirmed dates when updating content.
+## Deployment and recovery
+
+Two branches are required:
+
+- `main`: editable website source.
+- `gh-pages`: generated live site. **Do not delete this branch when cleaning old development branches.**
+
+Pull requests run the production build, internal-link check and formatting check. A merge into `main` publishes to `gh-pages`; GitHub Pages then deploys it. In repository Settings → Pages, use **Deploy from a branch → gh-pages → / (root)**.
+
+If the publish branch is accidentally deleted, run Actions → Deploy site → Run workflow on `main`. Once `gh-pages` exists again, restore the Pages source above and wait for the Pages deployment to finish. Verify the public URL rather than relying only on a successful build.
+
+Merged feature branches may be deleted. Git history retains previous versions; no force-push is needed.
